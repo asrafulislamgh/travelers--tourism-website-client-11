@@ -3,7 +3,7 @@ import { Col, Container, Row, Button, Form } from "react-bootstrap";
 import { useHistory, useLocation } from "react-router";
 import useAuth from "../../hooks/useAuth";
 const Login = () => {
-  const { handleGoogleSignin, setIsLoading, error, handleLogin } = useAuth();
+  const { handleGoogleSignin, setIsLoading, handleLogin } = useAuth();
 
   const location = useLocation();
   const history = useHistory();
@@ -12,7 +12,7 @@ const Login = () => {
   const googleSignin = () => {
     handleGoogleSignin().then(() => {
       history.push(redirect_url);
-      // setIsLoading(false);
+      setIsLoading(false);
     });
   };
 

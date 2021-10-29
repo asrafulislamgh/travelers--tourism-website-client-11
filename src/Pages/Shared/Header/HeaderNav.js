@@ -55,14 +55,7 @@ const HeaderNav = () => {
               >
                 Services
               </Nav.Link>
-              <Nav.Link
-                className="nav-item"
-                as={NavLink}
-                activeStyle={{ color: "#e00f28" }}
-                to="/doctors"
-              >
-                Doctors
-              </Nav.Link>
+
               <Nav.Link
                 className="nav-item"
                 as={NavLink}

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Service from "../Service/Service";
-
-const ServiceDetail = () => {
+const ServicesForHome = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
     fetch("http://mighty-dawn-62358.herokuapp.com/services")
@@ -13,7 +12,7 @@ const ServiceDetail = () => {
     <div>
       <Container className="text-center my-5">
         <h1 className="my-5 pt-5">Our Services</h1>
-        <Row md={2} lg={3} sm={2} xs={1} className="gy-4">
+        <Row md={2} lg={3} sm={2} xs={1} className="gy-5">
           {services.map(
             (service) =>
               service.key <= 6 && (
@@ -28,4 +27,4 @@ const ServiceDetail = () => {
   );
 };
 
-export default ServiceDetail;
+export default ServicesForHome;

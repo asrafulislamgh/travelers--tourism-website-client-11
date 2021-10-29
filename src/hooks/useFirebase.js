@@ -11,6 +11,7 @@ import initializingAuthentication from "../firebase/firebase.init";
 initializingAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   const auth = getAuth();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -23,17 +24,20 @@ const useFirebase = () => {
     });
   }, [auth]);
   const handleGoogleSignin = () => {
+    setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider);
   };
   const handleLogOut = () => {
+    setIsLoading(true);
     signOut(auth)
       .then(() => {
         console.log("Signingout successfully!");
+        setIsLoading(false);
       })
       .catch((error) => console.log(error.message));
   };
-  return { user, handleGoogleSignin, handleLogOut };
+  return { user, handleGoogleSignin, handleLogOut, isLoading, setIsLoading };
 };
 
 export default useFirebase;

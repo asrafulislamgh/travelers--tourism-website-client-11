@@ -64,6 +64,11 @@
   background-color: transparent;
   color: black;
 }
+.common-btn3:hover {
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+}
 .common-btn2:hover {
   background-color: white;
   color: #e10f28;
