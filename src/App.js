@@ -7,6 +7,7 @@ import HeaderNav from "./Pages/Shared/Header/HeaderNav";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Login from "./Pages/login/Login";
 import NotFoundPage from "./Pages/NotFound/NotFoundPage";
+import Services from "./Pages/Services/Services";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/services">
+              <Services></Services>
             </Route>
             <Route path="*">
               <NotFoundPage></NotFoundPage>
