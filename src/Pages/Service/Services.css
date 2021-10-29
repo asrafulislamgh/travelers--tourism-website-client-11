@@ -51,8 +51,18 @@
   font-size: 0.9rem;
 }
 .common-btn2 {
-  background-color: #e10f28;
+  background-color: #000;
   color: white;
+}
+.common-btn3 {
+  background-color: #000;
+  border: 2px solid black;
+  color: white;
+  font-weight: bold;
+}
+.card-container:hover .common-btn3 {
+  background-color: transparent;
+  color: black;
 }
 .common-btn2:hover {
   background-color: white;

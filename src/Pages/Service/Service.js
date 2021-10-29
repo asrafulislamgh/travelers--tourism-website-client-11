@@ -1,12 +1,13 @@
 import React from "react";
-import { Card, CardGroup, Button } from "react-bootstrap";
+import { Card, CardGroup, Button, Badge } from "react-bootstrap";
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
 import "./Service.css";
 import "./Services.css";
 
 const Service = ({ service }) => {
-  const { key, name, description, img, duration, discount, rating } = service;
+  const { key, name, description, img, duration, discount, price, rating } =
+    service;
   return (
     <div>
       <CardGroup>
@@ -16,8 +17,14 @@ const Service = ({ service }) => {
             <Card.Title className="card-title">{name}</Card.Title>
             <Card.Text className="card-info">{description}</Card.Text>
             <Card.Text className="card-info">
-              Day: {duration.day} Night: {duration.night}
+              <Badge pill bg="warning" className="px-3 py-2 me-2" text="dark">
+                Day: {duration.day}
+              </Badge>
+              <Badge pill bg="dark" className="px-3 py-2 me-2" text="light">
+                Night: {duration.night}
+              </Badge>
             </Card.Text>
+            <Card.Title className="card-title">${price}</Card.Title>
             <Card.Text>
               <Rating
                 className="rating"
@@ -30,7 +37,7 @@ const Service = ({ service }) => {
           </Card.Body>
           <Card.Footer className="card-body">
             <Link to={`/service/${key}`}>
-              <Button variant="light" className="common-btn2">
+              <Button variant="dark" className="common-btn3">
                 Book Now
               </Button>
             </Link>
