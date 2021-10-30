@@ -13,6 +13,7 @@ import {
 const AddService = () => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -26,7 +27,11 @@ const AddService = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
+      .then((result) => {
+        alert("A new service is added successfully!");
+        console.log(result);
+      });
+    reset();
   };
 
   useEffect(() => {}, []);

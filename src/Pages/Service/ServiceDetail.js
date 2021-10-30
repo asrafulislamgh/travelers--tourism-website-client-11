@@ -26,8 +26,22 @@ const ServiceDetail = () => {
     // (service) => console.log(service._id, id)
   );
   const handleBook = (id) => {
-    console.log(id);
-    alert("Your Product Id is:", id);
+    selectedService.user = user;
+    fetch("http://localhost:5000/booking", {
+      method: "post",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(selectedService),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        alert("A new booking is added successfully!");
+        console.log(result);
+      });
+    console.log(selectedService);
+    // console.log(user.displayName);
+    // alert("Your Product Id is:", user.displayName);
   };
   return (
     <div className="my-5 py-5">
@@ -53,7 +67,7 @@ const ServiceDetail = () => {
           </div>
 
           <Button
-            onClick={() => handleBook(selectedService?.key)}
+            onClick={() => handleBook(selectedService?._id)}
             variant="light"
             className="common-btn3 mt-4"
           >
@@ -63,6 +77,11 @@ const ServiceDetail = () => {
           <Link to="/services">
             <Button variant="light" className=" mt-4 ms-3">
               Back
+            </Button>
+          </Link>
+          <Link to="/myorder">
+            <Button variant="light" className=" mt-4 ms-3">
+              See all of your orders
             </Button>
           </Link>
         </Col>

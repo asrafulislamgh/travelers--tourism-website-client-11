@@ -60,6 +60,18 @@
   color: white;
   font-weight: bold;
 }
+.common-btn4 {
+  background-color: #d30000;
+  border: 2px solid #d30000;
+  color: white;
+  font-weight: bold;
+}
+.common-btn4:hover {
+  background-color: transparent;
+  border: 2px solid #d30000;
+  color: black;
+  font-weight: bold;
+}
 .card-container:hover .common-btn3 {
   background-color: transparent;
   color: black;
