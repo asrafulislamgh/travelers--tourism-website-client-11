@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 
 import { Col, Row, Button, Card, Badge } from "react-bootstrap";
 import { useParams, Link } from "react-router-dom";
@@ -10,10 +9,6 @@ const ServiceDetail = () => {
   const { id } = useParams();
   const [services, setServices] = useState([]);
   const { user } = useAuth();
-  const {
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
 
   useEffect(() => {
     fetch("https://mighty-dawn-62358.herokuapp.com/services")

@@ -19,7 +19,7 @@ const AddService = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/services", {
+    fetch("https://mighty-dawn-62358.herokuapp.com/services", {
       method: "post",
       headers: {
         "content-type": "application/json",
