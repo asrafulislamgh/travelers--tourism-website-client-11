@@ -6,7 +6,7 @@ const MyOrder = () => {
   const [myOrders, setMyOrders] = useState([]);
   const { user } = useAuth();
   useEffect(() => {
-    fetch("http://localhost:5000/booking")
+    fetch("https://tourism-website-travelers.web.app/booking")
       .then((res) => res.json())
       .then((result) => {
         const myOrderList = result.filter(

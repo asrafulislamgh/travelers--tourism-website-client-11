@@ -27,7 +27,7 @@ const ServiceDetail = () => {
   );
   const handleBook = (id) => {
     selectedService.user = user;
-    fetch("http://localhost:5000/booking", {
+    fetch("https://tourism-website-travelers.web.app/booking", {
       method: "post",
       headers: {
         "content-type": "application/json",
