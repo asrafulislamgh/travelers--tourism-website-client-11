@@ -12,6 +12,7 @@ const PrivateRoute = ({ children, ...rest }) => {
       </div>
     );
   }
+  console.log(isLoading);
   return (
     <div>
       <Route

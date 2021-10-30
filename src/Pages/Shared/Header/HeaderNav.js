@@ -23,14 +23,14 @@ const HeaderNav = () => {
         <Container className="py-2">
           <Navbar.Brand as={Link} to="/home">
             <img
-              style={{ maxHeight: "50px", width: "100%" }}
+              style={{ maxHeight: "40px", width: "100%" }}
               src={logo}
               alt="logo"
             ></img>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto header-nav ms-lg-5">
+            <Nav className="me-auto header-nav ms-lg-3">
               <Nav.Link
                 className="nav-item"
                 as={NavLink}
@@ -55,15 +55,45 @@ const HeaderNav = () => {
               >
                 Services
               </Nav.Link>
+              {user.email && (
+                <Nav.Link
+                  className="nav-item"
+                  as={NavLink}
+                  activeStyle={{ color: "#e00f28" }}
+                  to="/myorder"
+                >
+                  My Order
+                </Nav.Link>
+              )}
+              {user.email && (
+                <Nav.Link
+                  className="nav-item"
+                  as={NavLink}
+                  activeStyle={{ color: "#e00f28" }}
+                  to="/allorders"
+                >
+                  All Orders
+                </Nav.Link>
+              )}
+              {user.email && (
+                <Nav.Link
+                  className="nav-item"
+                  as={NavLink}
+                  activeStyle={{ color: "#e00f28" }}
+                  to="/addservice"
+                >
+                  Add Service
+                </Nav.Link>
+              )}
 
-              <Nav.Link
+              {/* <Nav.Link
                 className="nav-item"
                 as={NavLink}
                 activeStyle={{ color: "#e00f28" }}
                 to="/contact"
               >
                 Contact
-              </Nav.Link>
+              </Nav.Link> */}
             </Nav>
 
             {user.email && (

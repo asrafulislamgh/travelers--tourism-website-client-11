@@ -6,8 +6,7 @@ import "./Service.css";
 import "./Services.css";
 
 const Service = ({ service }) => {
-  const { key, name, description, img, duration, discount, price, rating } =
-    service;
+  const { _id, name, description, img, day, night, price, rating } = service;
   return (
     <div>
       <CardGroup>
@@ -18,10 +17,10 @@ const Service = ({ service }) => {
             <Card.Text className="card-info">{description}</Card.Text>
             <Card.Text className="card-info">
               <Badge pill bg="warning" className="px-3 py-2 me-2" text="dark">
-                Day: {duration.day}
+                Day: {day}
               </Badge>
               <Badge pill bg="dark" className="px-3 py-2 me-2" text="light">
-                Night: {duration.night}
+                Night: {night}
               </Badge>
             </Card.Text>
             <Card.Title className="card-title">${price}</Card.Title>
@@ -36,7 +35,7 @@ const Service = ({ service }) => {
             </Card.Text>
           </Card.Body>
           <Card.Footer className="card-body">
-            <Link to={`/service/${key}`}>
+            <Link to={`/service/${_id}`}>
               <Button variant="dark" className="common-btn3">
                 Book Now
               </Button>

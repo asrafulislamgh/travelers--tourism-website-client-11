@@ -5,9 +5,8 @@
         "description" : "Bangkok, Thailand’s capital, is a large city known for ornate shrines and vibrant street life. The boat-filled Chao Phraya River feeds its network of canals",
         "price" : 560,
         "rating" : 4.6,
-        "duration" : { "day": 4, "night": 3
-
-        },
+        "day" :  4, 
+        "night": 3,
         "discount" : 20,
         "img" : "https://www.siamsun.asia/wp-content/uploads/2021/02/BKK441BangkokStopover-400x300.jpg"
     },
@@ -17,9 +16,8 @@
         "description" : "Bologna is the lively, historic capital of the Emilia-Romagna region, in northern Italy. Its Piazza Maggiore is a sprawling plaza lined with arched colonnades,",
         "price" : 890,
         "rating" : 4.7,
-        "duration" : { "day": 5, "night": 4
-
-        },
+        "day" :  5, 
+        "night": 4,
         "discount" : 23,
         "img" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/7b/89/dd/blick-vom-asinelli-auf.jpg?w=400&h=-1&s=1"
     },
@@ -29,9 +27,8 @@
         "description" : "Amsterdam is the Netherlands’ capital, known for its artistic heritage, elaborate canal system and narrow houses with gabled facades,",
         "price" : 990,
         "rating" : 4.4,
-        "duration" : { "day": 4, "night": 3
-
-        },
+        "day" :  4, 
+        "night": 3,
         "discount" : 20,
         "img" : "https://www.siamsun.asia/wp-content/uploads/2021/02/BKK441BangkokStopover-400x300.jpg"
     },
@@ -41,9 +38,8 @@
         "description" : "Pattaya is a city on Thailand’s eastern Gulf coast known for its beaches. A quiet fishing village as recently as the 1960s, it’s now lined with resort hotels.",
         "price" : 560,
         "rating" : 4.8,
-        "duration" : { "day": 4, "night": 3
-
-        },
+        "day" :  6, 
+        "night": 5,
         "discount" : 20,
         "img" : "https://indiaoutbound.info/wp-content/uploads/2019/04/thailand-400x300.jpg"
     },
@@ -53,9 +49,8 @@
         "description" : "Arrecife is a city and municipality in the Canary Islands (Spain) situated in the centre-east of the island of Lanzarote, of which it has been the capital",
         "price" : 850,
         "rating" : 4.7,
-        "duration" : { "day": 4, "night": 3
-
-        },
+        "day" :  8, 
+        "night": 7,
         "discount" : 15,
         "img" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/4b/e2/bb/hotel-miramar.jpg?w=400&h=-1&s=1"
     },
@@ -65,9 +60,8 @@
         "description" : "Venice, the capital of northern Italy’s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea.",
         "price" : 870,
         "rating" : 4.8,
-        "duration" : { "day": 5, "night": 4
-
-        },
+        "day" :  6, 
+        "night": 5,
         "discount" : 20,
         "img" : "https://i0.wp.com/www.trvbox.com/wp-content/uploads/2018/08/venice-gondola-400x300.jpg"
     }

@@ -11,7 +11,7 @@ import initializingAuthentication from "../firebase/firebase.init";
 initializingAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -21,6 +21,7 @@ const useFirebase = () => {
         setUser({});
         console.log("State changing is not working");
       }
+      setIsLoading(false);
     });
   }, [auth]);
   const handleGoogleSignin = () => {

@@ -16,13 +16,14 @@ const ServiceDetail = () => {
   const onSubmit = (data) => console.log(data);
 
   useEffect(() => {
-    fetch("http://mighty-dawn-62358.herokuapp.com/services")
+    fetch("https://mighty-dawn-62358.herokuapp.com/services")
       .then((res) => res.json())
       .then((result) => setServices(result));
   }, []);
 
   const selectedService = services.find(
-    (service) => service.key === parseInt(id)
+    (service) => service._id === id
+    // (service) => console.log(service._id, id)
   );
   const handleBook = (id) => {
     console.log(id);
@@ -42,13 +43,10 @@ const ServiceDetail = () => {
             <p>{selectedService?.description}</p>
             <Card.Text className="card-info">
               <Badge pill bg="warning" className="px-3 me-2" text="dark">
-                <h6 className="mb-0"> Day: {selectedService?.duration.day}</h6>
+                <h6 className="mb-0"> Day: {selectedService?.day}</h6>
               </Badge>
               <Badge pill bg="dark" className="px-3  me-2" text="light">
-                <h6 className="mb-0">
-                  {" "}
-                  Day: {selectedService?.duration.night}
-                </h6>
+                <h6 className="mb-0"> Day: {selectedService?.night}</h6>
               </Badge>
             </Card.Text>
             <h3>${selectedService?.price}</h3>
