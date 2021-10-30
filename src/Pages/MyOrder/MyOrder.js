@@ -15,7 +15,23 @@ const MyOrder = () => {
         setMyOrders(myOrderList);
       });
   }, [user.email]);
-  console.log(myOrders);
+
+  const handleDelete = (id) => {
+    const confirmation = window.confirm("Are you sure to delete this?");
+    if (confirmation) {
+      fetch(`https://mighty-dawn-62358.herokuapp.com/booking/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          if (result.deletedCount === 1) {
+            alert("One item is deleted successfully!");
+          }
+          const remainingOrders = myOrders.filter((order) => order._id !== id);
+          setMyOrders(remainingOrders);
+        });
+    }
+  };
   return (
     <div>
       <Container>
@@ -48,7 +64,11 @@ const MyOrder = () => {
               <Button variant="light" className="common-btn3 mt-4 mx-2">
                 Confirm Now
               </Button>
-              <Button variant="danger" className="common-btn4 mt-4 mx-2">
+              <Button
+                onClick={() => handleDelete(myOrder._id)}
+                variant="danger"
+                className="common-btn4 mt-4 mx-2"
+              >
                 Delete
               </Button>
             </Col>
