@@ -27,7 +27,7 @@ const ServiceDetail = () => {
   );
   const handleBook = (id) => {
     selectedService.user = user;
-    fetch("https://tourism-website-travelers.web.app/booking", {
+    fetch("https://mighty-dawn-62358.herokuapp.com/booking", {
       method: "post",
       headers: {
         "content-type": "application/json",

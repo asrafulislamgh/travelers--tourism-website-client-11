@@ -6,7 +6,7 @@ const MyOrder = () => {
   const [myOrders, setMyOrders] = useState([]);
   const { user } = useAuth();
   useEffect(() => {
-    fetch("https://tourism-website-travelers.web.app/booking")
+    fetch("https://mighty-dawn-62358.herokuapp.com/booking")
       .then((res) => res.json())
       .then((result) => {
         const myOrderList = result.filter(
