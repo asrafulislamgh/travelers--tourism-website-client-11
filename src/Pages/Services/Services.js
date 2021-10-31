@@ -12,7 +12,12 @@ const Services = () => {
   return (
     <div>
       <Container className="text-center my-5">
-        <h1 className="my-5 pt-5">Our Services</h1>
+        <div className="text-center about-heading">
+          <h2>
+            Our <span>Services</span>
+          </h2>
+          <p>The services are ready for you!</p>
+        </div>
         <Row md={2} lg={3} sm={2} xs={1} className="gy-5">
           {services.map((service) => (
             <Col key={service._id}>
