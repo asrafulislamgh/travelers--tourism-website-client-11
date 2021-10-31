@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 
 const MyOrder = () => {
   const [myOrders, setMyOrders] = useState([]);
+  const [isUpdated, setIsUpdated] = useState(null);
   const { user } = useAuth();
   useEffect(() => {
     fetch("https://mighty-dawn-62358.herokuapp.com/booking")
@@ -14,7 +15,7 @@ const MyOrder = () => {
         );
         setMyOrders(myOrderList);
       });
-  }, [user.email]);
+  }, [user.email, isUpdated]);
 
   const handleDelete = (id) => {
     const confirmation = window.confirm("Are you sure to delete this?");
@@ -31,6 +32,23 @@ const MyOrder = () => {
           setMyOrders(remainingOrders);
         });
     }
+  };
+  const handleUpdate = (id) => {
+    const selectedItem = myOrders.find((item) => item._id === id);
+    fetch(`https://mighty-dawn-62358.herokuapp.com/allorders/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(selectedItem),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.modifiedCount > 0) {
+          setIsUpdated(true);
+          alert("Thank you for confirming the order.");
+        }
+      });
   };
   return (
     <div>
@@ -64,8 +82,9 @@ const MyOrder = () => {
               <img
                 style={{
                   width: "40px",
+                  height: "40px",
                   borderRadius: "50%",
-                  padding: "5px 5px 5px 0",
+                  margin: "5px 5px 5px 0",
                 }}
                 src={myOrder.user?.photoURL}
                 alt=""
@@ -77,7 +96,11 @@ const MyOrder = () => {
             </Col>
             <Col>
               {!myOrder.status ? (
-                <Button variant="light" className="common-btn3 mt-4 mx-2">
+                <Button
+                  onClick={() => handleUpdate(myOrder._id)}
+                  variant="light"
+                  className="common-btn3 mt-4 mx-2"
+                >
                   Pending
                 </Button>
               ) : (

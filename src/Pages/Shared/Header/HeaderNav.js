@@ -15,9 +15,9 @@ const HeaderNav = () => {
         collapseOnSelect
         expand="lg"
         bg="light"
-        variant="light"
+        variant="dark"
         sticky="top"
-        className="text-center"
+        className="text-center nav-background"
       >
         <Container className="py-2">
           <Navbar.Brand as={Link} to="/home">
@@ -33,7 +33,7 @@ const HeaderNav = () => {
               <Nav.Link
                 className="nav-item"
                 as={NavLink}
-                activeStyle={{ color: "#e00f28" }}
+                activeStyle={{ color: "#fff" }}
                 to="/home"
               >
                 Home
@@ -41,7 +41,7 @@ const HeaderNav = () => {
               <Nav.Link
                 className="nav-item"
                 as={NavLink}
-                activeStyle={{ color: "#e00f28" }}
+                activeStyle={{ color: "#fff" }}
                 to="/aboutus"
               >
                 About
@@ -49,7 +49,7 @@ const HeaderNav = () => {
               <Nav.Link
                 className="nav-item"
                 as={NavLink}
-                activeStyle={{ color: "#e00f28" }}
+                activeStyle={{ color: "#fff" }}
                 to="/services"
               >
                 Services
@@ -58,7 +58,7 @@ const HeaderNav = () => {
                 <Nav.Link
                   className="nav-item"
                   as={NavLink}
-                  activeStyle={{ color: "#e00f28" }}
+                  activeStyle={{ color: "#fff" }}
                   to="/myorder"
                 >
                   My Order
@@ -68,7 +68,7 @@ const HeaderNav = () => {
                 <Nav.Link
                   className="nav-item"
                   as={NavLink}
-                  activeStyle={{ color: "#e00f28" }}
+                  activeStyle={{ color: "#fff" }}
                   to="/allorders"
                 >
                   All Orders
@@ -78,7 +78,7 @@ const HeaderNav = () => {
                 <Nav.Link
                   className="nav-item"
                   as={NavLink}
-                  activeStyle={{ color: "#e00f28" }}
+                  activeStyle={{ color: "#fff" }}
                   to="/addservice"
                 >
                   Add Service

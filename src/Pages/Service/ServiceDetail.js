@@ -68,12 +68,12 @@ const ServiceDetail = () => {
   return (
     <div className="my-5 py-5">
       <Row className="gy-3 gy-sm-5">
-        <Col xl={5} md={6}>
+        <Col xl={5} lg={4} md={6}>
           <div>
             <img className="w-100 rounded" src={selectedService?.img} alt="" />
           </div>
         </Col>
-        <Col xl={4} md={6}>
+        <Col xl={3} lg={3} md={5} className="mx-4">
           <div>
             <h1>{selectedService?.name}</h1>
             <p>{selectedService?.description}</p>
@@ -88,7 +88,7 @@ const ServiceDetail = () => {
             <h3>${selectedService?.price}</h3>
           </div>
         </Col>
-        <Col xl={3} md={6}>
+        <Col xl={3} lg={3} md={12} className="mx-4">
           <Row className="d-flex justify-content-center text-center">
             <Col style={{ maxWidth: "400px" }}>
               <h3 className="py-3">Add Service</h3>

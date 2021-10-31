@@ -5,3 +5,7 @@ nav {
   padding-left: 0.8rem !important;
   padding-right: 0.8rem !important;
 }
+.nav-background {
+  background-color: #003580 !important;
+  font-weight: 400;
+}

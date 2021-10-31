@@ -13,10 +13,10 @@ const Footer = () => {
             <div>
               <img style={{ width: "90%" }} src={logoFooter} alt="logo"></img>
               <p className="py-4">
-                After contacting us our medical personnel will assess your
-                medical needs and assist with options that accommodate your
-                medical concerns or requirements. You will be assessed by phone
-                using your description of symptoms.
+                Tour is fun. We will make your life more enjoyable with our
+                quality. Tourism is travel for pleasure or business; also the
+                theory and practice of touring, the business of attracting,
+                accommodating, and entertaining tourists
               </p>
               <Button variant="link" className="btn common-btn">
                 Learn More
