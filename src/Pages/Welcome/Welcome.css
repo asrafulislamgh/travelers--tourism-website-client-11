@@ -1,0 +1,17 @@
+.about-heading {
+  color: #333333;
+  padding: 2rem;
+  margin: 5rem 0 4px;
+}
+.about-heading h2 {
+  font-size: 3rem;
+}
+.about-heading h2 span {
+  color: #2c2a82;
+}
+.about-heading p {
+  color: #ababab;
+}
+.about-container img {
+  width: 100%;
+}

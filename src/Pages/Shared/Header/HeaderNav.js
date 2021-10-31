@@ -3,14 +3,13 @@ import "./HeaderNav.css";
 import logo from "../../../img/logo.png";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import HeaderTop from "./HeaderTop";
 import useAuth from "../../../hooks/useAuth";
 
 const HeaderNav = () => {
   const { user, handleLogOut } = useAuth();
   return (
     <div>
-      <HeaderTop></HeaderTop>
+      {/* <HeaderTop></HeaderTop> */}
       <Navbar
         collapseOnSelect
         expand="lg"
@@ -71,7 +70,7 @@ const HeaderNav = () => {
                   activeStyle={{ color: "#fff" }}
                   to="/allorders"
                 >
-                  All Orders
+                  Manage Orders
                 </Nav.Link>
               )}
               {user.email && (

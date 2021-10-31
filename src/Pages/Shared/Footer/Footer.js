@@ -18,9 +18,11 @@ const Footer = () => {
                 theory and practice of touring, the business of attracting,
                 accommodating, and entertaining tourists
               </p>
-              <Button variant="link" className="btn common-btn">
-                Learn More
-              </Button>
+              <Link to="/aboutus">
+                <Button variant="link" className="btn common-btn">
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </Col>
           <Col md={3}>
@@ -43,7 +45,7 @@ const Footer = () => {
                   >
                     21st December, 2021
                   </p>
-                  <h6>Dental services is the best..</h6>
+                  <h6>Sky diving in Pattaya is..</h6>
                 </div>
               </div>
             </div>
@@ -64,7 +66,7 @@ const Footer = () => {
                   >
                     3rd November, 2021
                   </p>
-                  <h6>Check your stomach ASAP!</h6>
+                  <h6>Olympic is goin on!</h6>
                 </div>
               </div>
             </div>
@@ -85,7 +87,7 @@ const Footer = () => {
                   >
                     11st January, 2021
                   </p>
-                  <h6>Keep your heart updated!</h6>
+                  <h6>Are you ready to bang!</h6>
                 </div>
               </div>
             </div>
@@ -103,12 +105,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/services">Services</Link>
-              </li>
-              <li>
-                <Link to="/doctors">Doctors</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
               </li>
             </div>
           </Col>
@@ -160,7 +156,7 @@ const Footer = () => {
             <Col>
               <div className="text-center">
                 <p style={{ fontSize: "14px", color: "#999" }}>
-                  Copyright by DeltaCare 2021. All rights reserved.
+                  Copyright by Travelers' 2021. All rights reserved.
                 </p>
               </div>
             </Col>
