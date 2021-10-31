@@ -21,17 +21,28 @@ const Login = () => {
       <Container className="justify-content-center my-5">
         <Row className="d-flex justify-content-center text-center">
           <Col style={{ maxWidth: "400px" }} className="my-5 py-5">
-            <h3 className="py-3">Login</h3>
+            <div
+              style={{
+                backgroundColor: "#efefef",
+                padding: "50px 30px",
+                borderRadius: "10px",
+              }}
+            >
+              <h3 className="py-3">Login</h3>
 
-            <Form onSubmit={handleLogin}>
-              <div className="d-grid py-5">
-                <Button onClick={googleSignin} className="btn btn-primary py-3">
-                  Login With Google
-                </Button>
-                {/* <Button className="btn btn-dark text-white py-3">Github</Button>
-                <Button className="btn btn-primary py-3">Facebook</Button> */}
-              </div>
-            </Form>
+              <Form onSubmit={handleLogin}>
+                <div className="d-grid py-5">
+                  <Button
+                    onClick={googleSignin}
+                    className="btn btn-primary py-3"
+                  >
+                    Login With Google
+                  </Button>
+                  {/* <Button className="btn btn-dark text-white py-3">Github</Button>
+    <Button className="btn btn-primary py-3">Facebook</Button> */}
+                </div>
+              </Form>
+            </div>
           </Col>
         </Row>
       </Container>
