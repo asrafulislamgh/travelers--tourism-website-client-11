@@ -1,4 +1,5 @@
 import React from "react";
+import Newsletter from "../Newsletter/Newsletter";
 import Status from "../Status/Status";
 import Welcome from "../Welcome/Welcome";
 import CarouselSlider from "./CarouselSlider/CarouselSlider";
@@ -11,6 +12,7 @@ const Home = () => {
       <Status></Status>
       <Welcome></Welcome>
       <ServicesForHome></ServicesForHome>
+      <Newsletter></Newsletter>
     </div>
   );
 };

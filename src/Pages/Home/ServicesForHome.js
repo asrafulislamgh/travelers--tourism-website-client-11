@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Service from "../Service/Service";
 const ServicesForHome = () => {
   const [services, setServices] = useState([]);
@@ -22,6 +23,9 @@ const ServicesForHome = () => {
               )
           )}
         </Row>
+        <Link to="/services">
+          <Button className="common-btn3 mt-4">See All the Services</Button>
+        </Link>
       </Container>
     </div>
   );

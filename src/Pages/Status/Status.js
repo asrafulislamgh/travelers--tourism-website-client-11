@@ -10,30 +10,30 @@ const Status = () => {
           <Row lg={4} md={4} sm={2} xs={1}>
             <Col>
               <div>
-                <i className="progress-icon fas fa-trophy"></i>
-                <h3 className="icon-heading">93%</h3>
-                <p>Passing To job Market</p>
+                <i className="progress-icon fas fa-globe-asia"></i>
+                <h3 className="icon-heading">156</h3>
+                <p>Countries for you</p>
               </div>
             </Col>
             <Col>
               <div>
-                <i className="progress-icon fas fa-user-graduate"></i>
-                <h3 className="icon-heading">53k</h3>
-                <p>Enrolled Students</p>
+                <i className="progress-icon fas fa-users"></i>
+                <h3 className="icon-heading">253k</h3>
+                <p>Our Customers</p>
               </div>
             </Col>
             <Col>
               <div>
                 <i className="progress-icon far fa-smile"></i>
-                <h3 className="icon-heading">49k</h3>
-                <p>High Satisfation</p>
+                <h3 className="icon-heading">149k</h3>
+                <p>Highly Satisfied</p>
               </div>
             </Col>
             <Col>
               <div>
-                <i className="progress-icon fas fa-chalkboard-teacher"></i>
-                <h3 className="icon-heading">1230</h3>
-                <p>Instructors</p>
+                <i className="progress-icon fas fa-concierge-bell"></i>
+                <h3 className="icon-heading">590</h3>
+                <p>Available Packages</p>
               </div>
             </Col>
           </Row>

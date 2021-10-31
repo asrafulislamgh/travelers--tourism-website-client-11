@@ -10,8 +10,8 @@ const CarouselSlider = () => {
       <Carousel variant="dark">
         <Carousel.Item>
           <img className="d-block w-100" src={slider1} alt="First slide" />
-          <Carousel.Caption style={{ backgroundColor: "rgba(0,0,0, .2)" }}>
-            <h5 className="h2">Best Environment for our patients</h5>
+          <Carousel.Caption style={{ backgroundColor: "rgba(0,0,0, .4)" }}>
+            <h5 className="h1 text-white">Explore the world with us!</h5>
             {/* <p>
               Not only the treatment but also the quality of our environment can
               boost you up to be get better faster.
@@ -21,7 +21,7 @@ const CarouselSlider = () => {
         <Carousel.Item>
           <img className="d-block w-100" src={slider2} alt="Second slide" />
           <Carousel.Caption style={{ backgroundColor: "rgba(0,0,0, .2)" }}>
-            <h5 className="h2">Hi-Tech services are waiting for you!</h5>
+            <h5 className="h1 text-white">Touch the Sky with us!</h5>
             {/* <p>
               Dont be worried about the technology is being used for you. We
               make sure these are the best of the best.
@@ -31,7 +31,9 @@ const CarouselSlider = () => {
         <Carousel.Item>
           <img className="d-block w-100" src={slider3} alt="Third slide" />
           <Carousel.Caption style={{ backgroundColor: "rgba(0,0,0, .2)" }}>
-            <h5 className="h2">New life is the assets of our future </h5>
+            <h5 className="h1 text-white">
+              New life is the assets of our future{" "}
+            </h5>
             {/* <p>We are here to bring your baby in the world without any pain.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
