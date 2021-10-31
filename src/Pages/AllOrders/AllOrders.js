@@ -41,7 +41,7 @@ const AllOrders = () => {
     // selectedItem.id = id;
     // selectedItem.status = 1;
 
-    fetch(`https://mighty-dawn-62358.herokuapp.com/allorders/${id}`, {
+    fetch(`https://mighty-dawn-62358.herokuapp.com/update/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
