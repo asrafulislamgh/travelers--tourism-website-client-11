@@ -44,14 +44,14 @@ const AddService = () => {
             <h3 className="py-3">Add Service</h3>
             <Form onSubmit={handleSubmit(onSubmit)}>
               <FormControl
-                {...register("name")}
+                {...register("name", { required: true })}
                 className="input-field mb-3"
                 placeholder="Name"
                 aria-label="name"
                 aria-describedby="basic-addon2"
               />
               <FormControl
-                {...register("price")}
+                {...register("price", { required: true })}
                 className="input-field mb-3"
                 placeholder="Price"
                 aria-label="price"
@@ -59,7 +59,7 @@ const AddService = () => {
                 aria-describedby="basic-addon2"
               />
               <FormControl
-                {...register("day")}
+                {...register("day", { required: true })}
                 className="input-field mb-3"
                 placeholder="Day"
                 aria-label="day"
@@ -67,7 +67,7 @@ const AddService = () => {
                 aria-describedby="basic-addon2"
               />
               <FormControl
-                {...register("night")}
+                {...register("night", { required: true })}
                 className="input-field mb-3"
                 placeholder="Night"
                 aria-label="night"
@@ -75,7 +75,7 @@ const AddService = () => {
                 aria-describedby="basic-addon2"
               />
               <FormControl
-                {...register("img")}
+                {...register("img", { required: true })}
                 className="input-field mb-3"
                 placeholder="Image URL"
                 aria-label="img"

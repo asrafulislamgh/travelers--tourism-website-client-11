@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Button, Badge } from "react-bootstrap";
 import useAuth from "../../hooks/useAuth";
+// import ManageOrder from "./ManageOrder";
 
 const AllOrders = () => {
   const [allOrdersList, setAllOrdersList] = useState([]);
@@ -30,6 +31,25 @@ const AllOrders = () => {
         });
     }
   };
+
+  const handleUpdate = (id) => {
+    console.log(id);
+    const selectedItem = allOrdersList.find((item) => item._id === id);
+    // console.log(selectedItem);
+    // selectedItem._id = null;
+    // selectedItem.id = id;
+    // selectedItem.status = 1;
+
+    fetch(`https://mighty-dawn-62358.herokuapp.com/allorders/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(selectedItem),
+    }).then(() => {});
+    console.log(selectedItem);
+  };
+
   return (
     <div>
       <Container>
@@ -46,6 +66,11 @@ const AllOrders = () => {
             key={allOrder._id}
             className="g-3 mb-5"
           >
+            {/* <ManageOrder
+              allOrder={allOrder}
+              handleUpdate={handleUpdate}
+              handleDelete={handleDelete}
+            ></ManageOrder> */}
             <Col>
               <img className="w-100" src={allOrder.img} alt="" />
             </Col>
@@ -58,12 +83,39 @@ const AllOrders = () => {
               <Badge pill bg="dark" className="px-3 py-2 me-2" text="light">
                 Night: {allOrder.night}
               </Badge>
-              <h2 className="py-3">${allOrder.price}</h2>
+              <small>Total Ticket: {allOrder.user.number}</small>
+              <br />
+              <small>Ordered by: </small>
+              <img
+                style={{
+                  width: "40px",
+                  borderRadius: "50%",
+                  padding: "5px 5px 5px 0",
+                }}
+                src={allOrder.user?.photoURL}
+                alt=""
+              />
+              <small>{allOrder.user?.displayName}</small>
+              <h2 className="py-0">
+                ${allOrder.price} x {allOrder.user.number}
+              </h2>
             </Col>
             <Col>
-              <Button variant="light" className="common-btn3 mt-4 mx-2">
-                Confirm Now
-              </Button>
+              {!allOrder.status ? (
+                <Button
+                  onClick={() => {
+                    handleUpdate(allOrder._id);
+                  }}
+                  variant="light"
+                  className="common-btn3 mt-4 mx-2"
+                >
+                  Pending
+                </Button>
+              ) : (
+                <Button variant="success" className="btn btn-success mt-4 mx-2">
+                  Confirmed
+                </Button>
+              )}
               <Button
                 onClick={() => handleDelete(allOrder._id)}
                 variant="danger"

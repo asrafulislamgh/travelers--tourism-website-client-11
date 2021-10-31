@@ -58,12 +58,36 @@ const MyOrder = () => {
               <Badge pill bg="dark" className="px-3 py-2 me-2" text="light">
                 Night: {myOrder.night}
               </Badge>
-              <h2 className="py-3">${myOrder.price}</h2>
+              <small>Total Ticket: {myOrder.user.number}</small>
+              <br />
+              <small>Ordered by: </small>
+              <img
+                style={{
+                  width: "40px",
+                  borderRadius: "50%",
+                  padding: "5px 5px 5px 0",
+                }}
+                src={myOrder.user?.photoURL}
+                alt=""
+              />
+              <small>{myOrder.user?.displayName}</small>
+              <h2 className="py-1">
+                ${myOrder.price} x {myOrder.user.number}
+              </h2>
             </Col>
             <Col>
-              <Button variant="light" className="common-btn3 mt-4 mx-2">
+              {!myOrder.status ? (
+                <Button variant="light" className="common-btn3 mt-4 mx-2">
+                  Pending
+                </Button>
+              ) : (
+                <Button variant="success" className="btn btn-success mt-4 mx-2">
+                  Confirmed
+                </Button>
+              )}
+              {/* <Button variant="light" className="common-btn3 mt-4 mx-2">
                 Confirm Now
-              </Button>
+              </Button> */}
               <Button
                 onClick={() => handleDelete(myOrder._id)}
                 variant="danger"
